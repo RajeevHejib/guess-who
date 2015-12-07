@@ -1,6 +1,7 @@
 <% if @players.any? %>
   <% @players.each do |player| %>
     <h2><%= player.name %></h2>
+    <%= image_tag player.image.url(:thumb) %>
   <% end %>
 <% else %>
   <h1>No players yet! Please add some by filling in the form</h1>

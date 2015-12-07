@@ -27,6 +27,7 @@ feature 'player' do
       visit '/players'
       click_link 'Add a player'
       fill_in "Name", with: 'Player 1'
+      page.attach_file 'player[image]', 'spec/support/mona_lisa.jpeg'
       fill_in 'Gender', with: "M"
       fill_in 'Age', with: 30
       fill_in 'City', with: 'London'
@@ -36,9 +37,8 @@ feature 'player' do
       click_button 'Create Player'
       expect(page).to have_content 'Player 1'
       expect(current_path).to eq '/players'
+      expect(page).to have_selector("img")
     end
   end
-
-
 
 end
