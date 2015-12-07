@@ -1,0 +1,9 @@
+<% if Player.all.any? %>
+  <% Player.all.each do |player| %>
+    <h2><%= player.name %></h2>
+  <% end %>
+<% else %>
+  <h1>No players yet!</h1>
+<% end %>
+
+<%= link_to 'Add a player', new_player_path %>

@@ -1,0 +1,17 @@
+<%= form_for Player.new do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :gender %>
+  <%= f.text_field :gender %>
+  <%= f.label :age %>
+  <%= f.text_field :age %>
+  <%= f.label :city %>
+  <%= f.text_field :city %>
+  <%= f.label :nationality %>
+  <%= f.text_field :nationality %>
+  <%= f.label :no_of_friends %>
+  <%= f.text_field :no_of_friends %>
+  <%= f.label :marital_status %>
+  <%= f.text_field :marital_status %>
+  <%= f.submit %>
+<% end %>
