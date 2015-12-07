@@ -1,0 +1,10 @@
+No players yet!
+<% if Player.all.any? %>
+  <% Player.all.each do |player| %>
+    <h2><%= player.name %></h2>
+  <% end %>
+<% else %>
+  <h1>No players yet!</h1>
+<% end %>
+
+<a href='#'>Add a player</a>
