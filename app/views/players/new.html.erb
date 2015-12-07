@@ -1,6 +1,7 @@
-<%= form_for Player.new do |f| %>
+<%= form_for @player, html: {multipart: true} do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
+  <%= f.file_field :image %>
   <%= f.label :gender %>
   <%= f.text_field :gender %>
   <%= f.label :age %>
