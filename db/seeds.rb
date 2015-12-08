@@ -14,7 +14,7 @@
                                 no_of_friends: 200,
                                 marital_status: 'In a relationship',
                                 image_file_name: 'Fergus.jpeg',
-                                in_game: false
+                                in_game: true
                               }])
     player2 = Player.create([{
                                 name: 'Ivan Sathianathan' ,
@@ -35,7 +35,7 @@
                                 no_of_friends: 100,
                                 marital_status: 'Married',
                                 image_file_name: 'Amy.jpeg',
-                                in_game: false
+                                in_game: true
                               }])
     player4 = Player.create([{  name: 'Rajeev Hejib' ,
                                 gender: 'Male',
@@ -65,7 +65,7 @@
                                 no_of_friends: 100,
                                 marital_status: 'Single',
                                 image_file_name: 'Mateja.jpeg',
-                                in_game: false
+                                in_game: true
                               }])
     player7 = Player.create([{  name: 'Doville Sandaite',
                                 gender: 'Female',
