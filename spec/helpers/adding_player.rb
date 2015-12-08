@@ -18,13 +18,13 @@ end
 def create_player
   visit '/players'
   click_link 'Add a player'
-  fill_in "Name", with: 'Player 1'
+  fill_in "Name", with: 'Fergus Lemon'
   page.attach_file 'player[image]', 'spec/support/mona_lisa.jpeg'
-  fill_in 'Gender', with: "M"
+  select('Male', from: 'Gender')
   fill_in 'Age', with: 30
   fill_in 'City', with: 'London'
   fill_in 'Nationality', with: 'British'
   fill_in 'No of friends', with: 200
-  fill_in 'Marital status', with: true
+  select('Single', from: 'Marital status')
   click_button 'Create Player'
 end
