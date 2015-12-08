@@ -1,6 +1,6 @@
 class PlayersController < ApplicationController
 
-  include GameHelper
+  include GamesHelper
 
   def index
     @players = Player.all
@@ -18,6 +18,9 @@ class PlayersController < ApplicationController
 
   def player_params
     params.require(:player).permit(:name, :gender, :age, :city, :nationality, :no_of_friends, :marital_status, :image)
+  end
+
+  def update
   end
 
 

@@ -1,44 +1,49 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-4" id="player1">
+    <div class="col-sm-4" id="<%=@player1.in_game == true ? "true" : "false"%>">
       <%=image_tag @player1.image.url(:thumb) %>
       <br><%= @player1.name %>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4" id="<%=@player2.in_game == true ? "true" : "false"%>">
       <%=image_tag @player2.image.url(:thumb) %>
       <br><%= @player2.name %>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4" id="<%=@player3.in_game == true ? "true" : "false"%>">
       <%=image_tag @player3.image.url(:thumb) %>
       <br><%= @player3.name %>
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-4" id="<%=@player4.in_game == true ? "true" : "false"%>">
       <%=image_tag @player4.image.url(:thumb) %>
       <br><%= @player4.name %>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4" id="<%=@player5.in_game == true ? "true" : "false"%>">
       <%=image_tag @player5.image.url(:thumb) %>
       <br><%= @player5.name %>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4" id="<%=@player6.in_game == true ? "true" : "false"%>">
       <%=image_tag @player6.image.url(:thumb) %>
       <br><%= @player6.name %>
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-4" id="<%=@player7.in_game == true ? "true" : "false"%>">
       <%=image_tag @player7.image.url(:thumb) %>
       <br><%= @player7.name %>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4" id="<%=@player8.in_game == true ? "true" : "false"%>">
       <%=image_tag @player8.image.url(:thumb) %>
       <br><%= @player8.name %>
     </div>
-    <div class="col-sm-4">
+    <div class="col-sm-4" id="<%=@player9.in_game == true ? "true" : "false"%>">
       <%=image_tag @player9.image.url(:thumb) %>
       <br><%= @player9.name %>
     </div>
   </div>
-</div>
+</div><br>
+<%= form_for picked_player do |f| %>
+What is my <%= f.label :gender %>?
+<%= f.select :gender, ['Male', 'Female'] %>
+<%= f.submit %>
+<% end %>

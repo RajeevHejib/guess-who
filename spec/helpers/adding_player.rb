@@ -28,3 +28,8 @@ def create_player
   select('Single', from: 'Marital status')
   click_button 'Create Player'
 end
+
+def start_game
+  visit '/players'
+  click_link 'Start Game'
+end

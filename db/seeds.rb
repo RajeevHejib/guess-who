@@ -13,7 +13,8 @@
                                 nationality: 'British',
                                 no_of_friends: 200,
                                 marital_status: 'In a relationship',
-                                image_file_name: 'Fergus.jpeg'
+                                image_file_name: 'Fergus.jpeg',
+                                in_game: false
                               }])
     player2 = Player.create([{
                                 name: 'Ivan Sathianathan' ,
@@ -23,7 +24,8 @@
                                 nationality: 'British',
                                 no_of_friends: 250,
                                 marital_status: 'Married',
-                                image_file_name: 'Ivan.jpeg'
+                                image_file_name: 'Ivan.jpeg',
+                                in_game: true
                               }])
     player3 = Player.create([{  name: 'Amy Yang' ,
                                 gender: 'Female',
@@ -32,7 +34,8 @@
                                 nationality: 'Mongolian',
                                 no_of_friends: 100,
                                 marital_status: 'Married',
-                                image_file_name: 'Amy.jpeg'
+                                image_file_name: 'Amy.jpeg',
+                                in_game: false
                               }])
     player4 = Player.create([{  name: 'Rajeev Hejib' ,
                                 gender: 'Male',
@@ -41,7 +44,8 @@
                                 nationality: 'British',
                                 no_of_friends: 150,
                                 marital_status: 'Married',
-                                image_file_name: 'Rajeev.jpeg'
+                                image_file_name: 'Rajeev.jpeg',
+                                in_game: true
                               }])
     player5 = Player.create([{  name: 'Julien Deconinck',
                                 gender: 'Male',
@@ -50,7 +54,8 @@
                                 nationality: 'French',
                                 no_of_friends: 100,
                                 marital_status: 'Married',
-                                image_file_name: 'Julien.jpeg'
+                                image_file_name: 'Julien.jpeg',
+                                in_game: true
                               }])
         player6 = Player.create([{  name: 'Mateja Popovic',
                                 gender: 'Male',
@@ -59,7 +64,8 @@
                                 nationality: 'Serbian',
                                 no_of_friends: 100,
                                 marital_status: 'Single',
-                                image_file_name: 'Mateja.jpeg'
+                                image_file_name: 'Mateja.jpeg',
+                                in_game: false
                               }])
     player7 = Player.create([{  name: 'Doville Sandaite',
                                 gender: 'Female',
@@ -68,7 +74,8 @@
                                 nationality: 'Lithuanian',
                                 no_of_friends: 200,
                                 marital_status: 'In a relationship',
-                                image_file_name: 'Dovile.jpeg'
+                                image_file_name: 'Dovile.jpeg',
+                                in_game: true
                               }])
     player8 = Player.create([{  name: 'Rob Stevenson',
                                 gender: 'Male',
@@ -77,7 +84,8 @@
                                 nationality: 'British',
                                 no_of_friends: 500,
                                 marital_status: 'In a relationship',
-                                image_file_name: 'Rob.jpeg'
+                                image_file_name: 'Rob.jpeg',
+                                in_game: true
                                 }])
 player9 = Player.create([{  name: 'Mari-Ann Meling',
                                 gender: 'Female',
@@ -86,5 +94,6 @@ player9 = Player.create([{  name: 'Mari-Ann Meling',
                                 nationality: 'Norwegian',
                                 no_of_friends: 100,
                                 marital_status: 'Single',
-                                image_file_name: 'Mari-Ann.jpeg'
+                                image_file_name: 'Mari-Ann.jpeg',
+                                in_game: true
                               }])
