@@ -5,6 +5,7 @@ feature 'player' do
   context 'no players have been added' do
     scenario 'should display prompt to add player' do
       visit '/players'
+      sign_up("email@email.com", 'password', 'password')
       expect(page).to have_content 'No players yet'
       expect(page).to have_link 'Add a player'
     end
@@ -25,6 +26,7 @@ feature 'player' do
   context 'creating players' do
     scenario 'prompts player to fill out a form, then displays player details' do
       visit '/players'
+      sign_up("email@email.com", 'password', 'password')
       click_link 'Add a player'
       fill_in "Name", with: 'Player 1'
       page.attach_file 'player[image]', 'spec/support/mona_lisa.jpeg'
