@@ -9,14 +9,10 @@
  <% if user_signed_in? %>
    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
    <%= link_to 'Add a player', new_player_path %>
-   <% unless current_game.started %>
-     <%= link_to 'Start Game', new_game_path %>
-   <% end %>
  <% else %>
    <%= link_to "Sign in", new_user_session_path %>
    <%= link_to "Sign up", new_user_registration_path %>
  <% end %>
-
 
 </head>
 <body>

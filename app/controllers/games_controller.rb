@@ -1,5 +1,7 @@
 class GamesController < ApplicationController
 
+  include GameHelper
+
   def index
     @player1 = Player.find(1)
     @player2 = Player.find(2)
@@ -10,6 +12,11 @@ class GamesController < ApplicationController
     @player7 = Player.find(7)
     @player8 = Player.find(8)
     @player9 = Player.find(9)
+  end
+
+  def new
+    current_game.in_game
+    redirect_to "/games"
   end
 
 end
