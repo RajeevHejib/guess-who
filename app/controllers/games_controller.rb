@@ -2,7 +2,7 @@ class GamesController < ApplicationController
 
   include GamesHelper
 
-  def index
+  def view
     @player1 = Player.find(1)
     @player2 = Player.find(2)
     @player3 = Player.find(3)
@@ -21,5 +21,11 @@ class GamesController < ApplicationController
     p picked_player
     redirect_to "/games"
   end
+
+  def gender
+    redirect_to "/gender"
+
+  end
+
 
 end
