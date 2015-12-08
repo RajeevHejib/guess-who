@@ -41,8 +41,9 @@
       <br><%= @player9.name %>
     </div>
   </div>
-</div>
-<div class="col-sm-4">
-  <%=image_tag picked_player.image.url(:thumb) %>
-  <br><%= picked_player.name %>
-</div>
+</div><br>
+<%= form_for picked_player do |f| %>
+What is my <%= f.label :gender %>?
+<%= f.select :gender, ['Male', 'Female'] %>
+<%= f.submit %>
+<% end %>

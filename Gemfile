@@ -47,6 +47,7 @@ end
 
 gem 'devise'
 gem 'paperclip'
+gem 'factory_girl_rails'
 
 group :test do
   gem 'rspec-rails'

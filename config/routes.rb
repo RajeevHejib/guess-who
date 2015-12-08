@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   root 'players#index'
 
   resources :players
-  resources :games
+  # resources :games
+
+  get '/games' => 'games#view', as: :games
+  get '/gender' => 'gender#view', as: :gender
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
