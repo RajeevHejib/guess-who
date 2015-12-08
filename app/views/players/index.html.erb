@@ -1,5 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+      body {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+      }
+      body::after {
+        content: "";
+        background: url(background_photo.jpeg);
+        opacity: 0.3;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+      }
+
+
+  </style>
+</head>
+<body>
+</body>
+</html>
+
+
 <% if !user_signed_in? %>
-  <h1>Please Sign In/Sign Up</h1>
+  <h1 id="header">Welcome to Guess Who</h1>
 <% else %>
 <br>
   <% if @players.count == 0 %>
