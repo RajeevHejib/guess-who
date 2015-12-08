@@ -3,7 +3,7 @@
   <%= f.text_field :name %>
   <%= f.file_field :image %>
   <%= f.label :gender %>
-  <%= f.text_field :gender %>
+  <%= f.select :gender, ['Male', 'Female'] %>
   <%= f.label :age %>
   <%= f.text_field :age %>
   <%= f.label :city %>
@@ -13,6 +13,6 @@
   <%= f.label :no_of_friends %>
   <%= f.text_field :no_of_friends %>
   <%= f.label :marital_status %>
-  <%= f.text_field :marital_status %>
+  <%= f.select :marital_status, ['Single', 'Married', 'In a relationship'] %>
   <%= f.submit %>
 <% end %>
