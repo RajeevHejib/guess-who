@@ -2,6 +2,7 @@ class PlayersController < ApplicationController
 
   def index
     @players = Player.all
+    @player = Player.find(1)
   end
 
   def new
