@@ -5,3 +5,86 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+    player1 = Player.create([{  name: 'Fergus Lemon',
+                                gender: 'Male',
+                                age: 30,
+                                city: 'Manchester',
+                                nationality: 'British',
+                                no_of_friends: 200,
+                                marital_status: 'In a relationship',
+                                image_file_name: 'Fergus.jpeg'
+                              }])
+    player2 = Player.create([{
+                                name: 'Ivan Sathianathan' ,
+                                gender: 'Male',
+                                age: 31 ,
+                                city: 'London',
+                                nationality: 'British',
+                                no_of_friends: 250,
+                                marital_status: 'Married',
+                                image_file_name: 'Ivan.jpeg'
+                              }])
+    player3 = Player.create([{  name: 'Amy Yang' ,
+                                gender: 'Female',
+                                age: 28 ,
+                                city: 'Ulaanbaatar',
+                                nationality: 'Mongolian',
+                                no_of_friends: 100,
+                                marital_status: 'Married',
+                                image_file_name: 'Amy.jpeg'
+                              }])
+    player4 = Player.create([{  name: 'Rajeev Hejib' ,
+                                gender: 'Male',
+                                age: 40,
+                                city: 'London',
+                                nationality: 'British',
+                                no_of_friends: 150,
+                                marital_status: 'Married',
+                                image_file_name: 'Rajeev.jpeg'
+                              }])
+    player5 = Player.create([{  name: 'Julien Deconinck',
+                                gender: 'Male',
+                                age: 35,
+                                city: 'Paris',
+                                nationality: 'French',
+                                no_of_friends: 100,
+                                marital_status: 'Married',
+                                image_file_name: 'Julien.jpeg'
+                              }])
+        player6 = Player.create([{  name: 'Mateja Popovic',
+                                gender: 'Male',
+                                age: 26,
+                                city: 'Belgrade',
+                                nationality: 'Serbian',
+                                no_of_friends: 100,
+                                marital_status: 'Single',
+                                image_file_name: 'Mateja.jpeg'
+                              }])
+    player7 = Player.create([{  name: 'Doville Sandaite',
+                                gender: 'Female',
+                                age: 26,
+                                city: 'Vilnus',
+                                nationality: 'Lithuanian',
+                                no_of_friends: 200,
+                                marital_status: 'In a relationship',
+                                image_file_name: 'Dovile.jpeg'
+                              }])
+    player8 = Player.create([{  name: 'Rob Stevenson',
+                                gender: 'Male',
+                                age: 28,
+                                city: 'Reading',
+                                nationality: 'British',
+                                no_of_friends: 500,
+                                marital_status: 'In a relationship',
+                                image_file_name: 'Rob.jpeg'
+                                }])
+player9 = Player.create([{  name: 'Mari-Ann Meling',
+                                gender: 'Female',
+                                age: 22,
+                                city: 'Stavanger',
+                                nationality: 'Norwegian',
+                                no_of_friends: 100,
+                                marital_status: 'Single',
+                                image_file_name: 'Mari-Ann.jpeg'
+                              }])
