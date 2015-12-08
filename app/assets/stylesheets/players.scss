@@ -1,3 +1,15 @@
 // Place all the styles related to the players controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#header {
+  font-size: 90px;
+  font-family: helvetica;
+  font-weight: bold;
+  color: #696969;
+  text-shadow: 1px 1px #696969;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
