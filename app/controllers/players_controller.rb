@@ -1,6 +1,6 @@
 class PlayersController < ApplicationController
 
-  include GameHelper
+  include GamesHelper
 
   def index
     @players = Player.all
