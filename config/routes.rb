@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   root 'players#index'
 
   resources :players
+  resources :game
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
