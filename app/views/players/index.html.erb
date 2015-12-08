@@ -1,8 +1,10 @@
-<br> <% if @players.any? %>
-  <% @players.each do |player| %>
-    <%= image_tag player.image.url(:thumb) %>
-    <h6><%= player.name %></h6>
-  <% end %>
+<% if !user_signed_in? %>
+  <h1>Please Sign In/Sign Up</h1>
 <% else %>
-  <h1>No players yet! Please add some by filling in the form</h1>
+<br>
+  <% if @players.count == 0 %>
+    <h1>No players yet! Please add some by filling in the form</h1>
+  <% else %>
+      <%= link_to 'Start Game', new_game_path %>
+  <% end %>
 <% end %>

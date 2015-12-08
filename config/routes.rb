@@ -9,8 +9,6 @@ Rails.application.routes.draw do
   root 'players#index'
 
   resources :players
-  resources :game
-
   resources :games
 
   # Example of regular route:
