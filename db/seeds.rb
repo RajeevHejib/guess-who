@@ -131,14 +131,14 @@ player12 = Player.create([{  name: 'Deon Tan',
                               in_game: true
                             }])
 
-player13 = Player.create([{  name: 'Nikesh Ashar',
+player13 = Player.create([{  name: 'Raphael Jauslin',
                               gender: 'Male',
                               age: 27,
                               city: 'London',
                               nationality: 'British',
                               no_of_friends: 200,
                               marital_status: 'Single',
-                              image_file_name: 'Nikesh.jpeg',
+                              image_file_name: 'Raphael.jpeg',
                               in_game: true
                             }])
 
@@ -171,6 +171,6 @@ player16 = Player.create([{  name: 'Edward Withers',
                                 nationality: 'British',
                                 no_of_friends: 250,
                                 marital_status: 'Single',
-                                image_file_name: 'Ed.jpeg',
+                                image_file_name: 'Edward.jpeg',
                                 in_game: true
                               }])
