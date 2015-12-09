@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get 'games/nationality' => 'games#nationality', as: :nationality
   get 'games/single' => 'games#single', as: :single
   get 'games/restart' => 'games#restart', as: :restart
+  get 'games/winner/(/:id)' => 'games#winner', as: :winner
+
 
   get '/games' => 'games#view', as: :games
   # get '/gender' => 'gender#view', as: :gender

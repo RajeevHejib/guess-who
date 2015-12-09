@@ -92,5 +92,13 @@
 <br>
 <br>
 <br>
+Guess player:<%= form_for @random_player, url: gender_path do |f| %>
+  <% f.label :have_a_guess %>
+  <% f.select :name, [''] + Player.pluck(:name), :selected => ''%>
+<% end %>
+<br>
+<br>
+<br>
+
 <%= link_to "Restart the game", restart_path %>
 </h4>

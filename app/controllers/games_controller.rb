@@ -86,5 +86,14 @@ class GamesController < ApplicationController
     redirect_to '/games'
   end
 
+  def winner
+    @random_player = Player.find(session[:random_player_id])
+    if player.id == @random_player.id
+      p "Winner"
+    else
+      p 'try again'
+    end
+  end
+
 
 end
