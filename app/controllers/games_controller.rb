@@ -12,13 +12,10 @@ class GamesController < ApplicationController
     @player7 = Player.find(7)
     @player8 = Player.find(8)
     @player9 = Player.find(9)
+    @random_player = Player.find(session[:random_player_id])
   end
 
   def new
-    current_game.in_game
-    p picked_player
-    picked_player
-    p picked_player
     redirect_to "/games"
   end
 
