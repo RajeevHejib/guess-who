@@ -23,7 +23,7 @@ end
       select('Male', from: 'Gender')
       click_button('Update Player')
       expect(page).to have_content('Fergus')
-      expect(page).not_to have_content('Ivan')
+      expect(page).to have_css('#false')
     end
   end
 
