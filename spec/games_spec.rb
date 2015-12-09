@@ -14,14 +14,4 @@ describe Games do
     expect(games).to respond_to(:choose_player)
   end
 
-
-  context 'when gam started' do
-      it 'picks a random player' do
-        expect(player).to receive(:first).and_return(:player)
-        games.choose_player
-      end
-  end
-
-
-
 end

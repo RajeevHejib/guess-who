@@ -43,11 +43,9 @@
   </div>
 </div><br>
 <div class="col-sm-12" >
-  <%=image_tag picked_player.image.url(:thumb) %>
-  <br><%= picked_player.name %>
+  <%=image_tag @random_player.image.url(:thumb) %>
+  <br><%= @random_player.name %>
 </div>
-<%= form_for picked_player do |f| %>
-What is my <%= f.label :gender %>?
-<%= f.select :gender, ['Male', 'Female'] %>
-<%= f.submit %>
-<% end %>
+
+<%= link_to "Are you a male?", gender_path %>
+<%= link_to "Are you over 30?", age_path %>

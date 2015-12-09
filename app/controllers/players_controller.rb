@@ -4,34 +4,22 @@ class PlayersController < ApplicationController
 
   def index
     @players = Player.all
-    current_game
+    @random_player = Player.order("RANDOM()").first
+    @random_player_id = @random_player.id
+    session[:random_player_id] = @random_player_id
   end
-
-  def new
-    @player = Player.new
-  end
-
-  def create
-    @player = Player.create(player_params)
-    redirect_to '/players'
-  end
-
-
 
   def update
     @players= Player.all
+    @random_player = Player.find(session[:random_player_id])
     @players.each do |player|
-      player.update(:in_game => false) unless picked_player.gender == player_params["gender"]
+      player.update(:in_game => false) unless player.gender == @random_player.gender
     end
-    p player_params["gender"]
 
-    # @players= Player.where(gender: player_params["gender"])
-    #   @players= Player.all
-    #   # else
-    #   # @players = Player.filter(params.slice(:gender => @gender_param))
-    #   p @players
-    # end
     redirect_to '/games'
+  end
+
+  def test
   end
 
   private

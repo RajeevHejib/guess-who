@@ -12,13 +12,13 @@ FactoryGirl.define do
 
  # This will use the User class (Admin would have been guessed)
  factory :player2, class: Player do
-   name 'Ivan Sathianathan'
+   name 'Amy Yang'
    gender 'Female'
-   age 31
-   city 'London'
-   nationality 'British'
-   no_of_friends 250
+   age 28
+   city 'Ulaanbaatar'
+   nationality 'Mongolian'
+   no_of_friends 100
    marital_status 'Married'
-   image_file_name 'Ivan.jpeg'
+   image_file_name 'Amy.jpeg'
  end
 end

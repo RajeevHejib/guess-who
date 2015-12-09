@@ -12,19 +12,33 @@ class GamesController < ApplicationController
     @player7 = Player.find(7)
     @player8 = Player.find(8)
     @player9 = Player.find(9)
+    @random_player = Player.find(session[:random_player_id])
   end
 
   def new
-    current_game.in_game
-    p picked_player
-    picked_player
-    p picked_player
     redirect_to "/games"
   end
 
   def gender
-    redirect_to "/gender"
+    @players= Player.all
+    @random_player = Player.find(session[:random_player_id])
+    @players.each do |player|
+      player.update(:in_game => false) unless player.gender == @random_player.gender
+    end
+    redirect_to '/games'
+  end
 
+  def age
+    @players= Player.all
+    @random_player = Player.find(session[:random_player_id])
+    @players.each do |player|
+      if @random_player.age > 30
+        player.update(:in_game => false) if player.age <= 30
+      else
+        player.update(:in_game => false) if player.age > 30
+      end
+    end
+    redirect_to '/games'
   end
 
 

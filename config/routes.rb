@@ -11,8 +11,14 @@ Rails.application.routes.draw do
   resources :players
   # resources :games
 
+  get 'games/gender' => 'games#gender', as: :gender
+  get 'games/age' => 'games#age', as: :age
+
+
+
+
   get '/games' => 'games#view', as: :games
-  get '/gender' => 'gender#view', as: :gender
+  # get '/gender' => 'gender#view', as: :gender
 
 
   # Example of regular route:

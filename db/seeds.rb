@@ -29,7 +29,7 @@
                               }])
     player3 = Player.create([{  name: 'Amy Yang' ,
                                 gender: 'Female',
-                                age: 28 ,
+                                age: 35 ,
                                 city: 'Ulaanbaatar',
                                 nationality: 'Mongolian',
                                 no_of_friends: 100,
