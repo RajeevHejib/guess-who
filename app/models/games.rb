@@ -1,6 +1,4 @@
-# require_relative 'player'
-
-class Games
+class Games 
   attr_reader :started
 
   def initialize
