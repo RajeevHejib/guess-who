@@ -12,6 +12,13 @@ class GamesController < ApplicationController
     @player7 = Player.find(7)
     @player8 = Player.find(8)
     @player9 = Player.find(9)
+    @player10 = Player.find(10)
+    @player11 = Player.find(11)
+    @player12 = Player.find(12)
+    @player13 = Player.find(13)
+    @player14 = Player.find(14)
+    @player15 = Player.find(15)
+    @player16 = Player.find(16)
     @random_player = Player.find(session[:random_player_id])
   end
 
