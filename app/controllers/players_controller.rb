@@ -23,6 +23,7 @@ class PlayersController < ApplicationController
     @players.each do |player|
       player.update(:in_game => false) unless picked_player.gender == player_params["gender"]
     end
+    p player_params["gender"]
 
     # @players= Player.where(gender: player_params["gender"])
     #   @players= Player.all
