@@ -68,6 +68,16 @@ class GamesController < ApplicationController
     redirect_to '/games'
   end
 
+  def restart
+    @players= Player.all
+    @players.each do |player|
+      player.update(:in_game => true)
+    end
+    @random_player = Player.order("RANDOM()").first
+    @random_player_id = @random_player.id
+    session[:random_player_id] = @random_player_id
+    redirect_to '/games'
+  end
 
 
 end

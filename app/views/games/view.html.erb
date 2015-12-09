@@ -46,8 +46,22 @@
   <%=image_tag @random_player.image.url(:thumb) %>
   <br><%= @random_player.name %>
 </div>
-
+<h4 align="center">
 <%= link_to "Are you a male?", gender_path %>
+<br>
+<br>
+<br>
 <%= link_to "Are you over 30?", age_path %>
+<br>
+<br>
+<br>
 <%= link_to "Are you British?", nationality_path %>
+<br>
+<br>
+<br>
 <%= link_to "Are you single?", single_path %>
+<br>
+<br>
+<br>
+<%= link_to "Restart the game", restart_path %>
+</h4>

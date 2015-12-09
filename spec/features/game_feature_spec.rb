@@ -50,6 +50,14 @@ end
       expect(page).to have_css('#false')
     end
 
+    scenario 'it allows user to reset game' do
+      sign_up("email@email.com", 'password', 'password')
+      click_link('Start Game')
+      click_link('Restart the game')
+      expect(page).not_to have_css('#false')
+      expect(page).to have_css('#true')
+    end
+
 
   end
 

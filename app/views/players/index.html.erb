@@ -21,7 +21,20 @@
         position: absolute;
         z-index: -1;
       }
+      #signin {
+        background-color: red;
+        background-position: bottom;
+        text-decoration: none;
+        margin-left: 313px;
+        margin-top: 454px;
+      }
 
+      #signup {
+        background-color: green;
+        background-position: bottom;
+        text-decoration: none;
+        margin-top: 457px;
+      }
 
   </style>
 </head>
@@ -32,6 +45,12 @@
 
 <% if !user_signed_in? %>
   <h1 id="header">Welcome to Guess Who</h1>
+  <div class="btn btn-primary btn-lg" id="signin" >
+    <%= link_to "Sign in", new_user_session_path %>
+  </div>
+  <div class="btn btn-primary btn-lg" id="signup">
+    <%= link_to "Sign up", new_user_registration_path %>
+  </div>
 <% else %>
 <br>
   <% if @players.count == 0 %>
