@@ -44,8 +44,6 @@
 </div><br>
 <div class="col-sm-12" >
   <%=image_tag @random_player.image.url(:thumb) %>
-  <br><%= @random_player.name %>
-  <%= 'Hello ' + @random_player.name + ' test123' %>
 </div>
 <h4 align="center">
 <%= link_to "Are you a male?", gender_path %>
@@ -64,5 +62,13 @@
 <br>
 <br>
 <br>
+Guess player:<%= form_for @random_player, url: gender_path do |f| %>
+  <% f.label :have_a_guess %>
+  <% f.select :name, [''] + Player.pluck(:name), :selected => ''%>
+<% end %>
+<br>
+<br>
+<br>
+
 <%= link_to "Restart the game", restart_path %>
 </h4>
