@@ -45,6 +45,7 @@
 <div class="col-sm-12" >
   <%=image_tag @random_player.image.url(:thumb) %>
   <br><%= @random_player.name %>
+  <%= 'Hello ' + @random_player.name + ' test123' %>
 </div>
 
 <%= link_to "Are you a male?", gender_path %>

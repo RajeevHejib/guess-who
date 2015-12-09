@@ -52,4 +52,5 @@ gem 'factory_girl_rails'
 group :test do
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'rack_session_access'
 end
