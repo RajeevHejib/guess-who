@@ -97,3 +97,80 @@ player9 = Player.create([{  name: 'Mari-Ann Meling',
                                 image_file_name: 'Mari-Ann.jpeg',
                                 in_game: true
                               }])
+
+player10 = Player.create([{  name: 'Eleni Skouroupathi',
+                                gender: 'Female',
+                                age: 22,
+                                city: 'Athens',
+                                nationality: 'Greek',
+                                no_of_friends: 100,
+                                marital_status: 'Single',
+                                image_file_name: 'Eleni.jpeg',
+                                in_game: true
+                              }])
+
+player11 = Player.create([{  name: 'Rebecca Collins',
+                                gender: 'Female',
+                                age: 33,
+                                city: 'Rochdale',
+                                nationality: 'British',
+                                no_of_friends: 350,
+                                marital_status: 'Married',
+                                image_file_name: 'Rebecca.jpeg',
+                                in_game: true
+                              }])
+
+player12 = Player.create([{  name: 'Deon Tan',
+                              gender: 'Male',
+                              age: 25,
+                              city: 'London',
+                              nationality: 'Asian',
+                              no_of_friends: 250,
+                              marital_status: 'Single',
+                              image_file_name: 'Deon.jpeg',
+                              in_game: true
+                            }])
+
+player13 = Player.create([{  name: 'Nikesh Ashar',
+                              gender: 'Male',
+                              age: 27,
+                              city: 'London',
+                              nationality: 'British',
+                              no_of_friends: 200,
+                              marital_status: 'Single',
+                              image_file_name: 'Nikesh.jpeg',
+                              in_game: true
+                            }])
+
+player14 = Player.create([{  name: 'Chuka Ebi',
+                                gender: 'Male',
+                                age: 21,
+                                city: 'London',
+                                nationality: 'British',
+                                no_of_friends: 250,
+                                marital_status: 'Single',
+                                image_file_name: 'Chuka.jpeg',
+                                in_game: true
+                              }])
+
+player15 = Player.create([{  name: 'The Sweenster',
+                                gender: 'Male',
+                                age: 26,
+                                city: 'London',
+                                nationality: 'Irish',
+                                no_of_friends: 250,
+                                marital_status: 'Single',
+                                image_file_name: 'Aaron.jpeg',
+                                in_game: true
+                              }])
+
+player16 = Player.create([{  name: 'Edward Withers',
+                                gender: 'Male',
+                                age: 25,
+                                city: 'London',
+                                nationality: 'British',
+                                no_of_friends: 250,
+                                marital_status: 'Single',
+                                image_file_name: 'Ed.jpeg',
+                                in_game: true
+                              }])
