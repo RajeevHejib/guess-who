@@ -15,10 +15,12 @@ class PlayersController < ApplicationController
     @players.each do |player|
       player.update(:in_game => false) unless player.gender == @random_player.gender
     end
-
     redirect_to '/games'
   end
-  
+
+  def test
+  end
+
   private
 
   def player_params

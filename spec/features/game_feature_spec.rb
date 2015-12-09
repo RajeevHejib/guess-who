@@ -17,14 +17,24 @@ end
   end
 
   context 'filtering' do
-    scenario 'it allows to ask questions' do
+
+    scenario 'it allows to filter on gender' do
       sign_up("email@email.com", 'password', 'password')
       click_link('Start Game')
-      select('Male', from: 'Gender')
-      click_button('Update Player')
+      click_link('Are you a male?')
       expect(page).to have_content('Fergus')
       expect(page).to have_css('#false')
     end
+
+    scenario 'it allows to filter on age' do
+      sign_up("email@email.com", 'password', 'password')
+      click_link('Start Game')
+      click_link('Are you over 30?')
+      expect(page).to have_content('Fergus')
+      expect(page).to have_css('#false')
+    end
+
+
   end
 
 
