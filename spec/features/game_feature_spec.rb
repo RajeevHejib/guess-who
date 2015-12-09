@@ -34,6 +34,22 @@ end
       expect(page).to have_css('#false')
     end
 
+    scenario 'it allows to filter on nationality' do
+      sign_up("email@email.com", 'password', 'password')
+      click_link('Start Game')
+      click_link('Are you British?')
+      expect(page).to have_content('Fergus')
+      expect(page).to have_css('#false')
+    end
+
+    scenario 'it allows to filter on marital status' do
+      sign_up("email@email.com", 'password', 'password')
+      click_link('Start Game')
+      click_link('Are you single?')
+      expect(page).to have_content('Fergus')
+      expect(page).to have_css('#false')
+    end
+
 
   end
 

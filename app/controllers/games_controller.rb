@@ -41,5 +41,33 @@ class GamesController < ApplicationController
     redirect_to '/games'
   end
 
+  def nationality
+    @players= Player.all
+    @random_player = Player.find(session[:random_player_id])
+    @players.each do |player|
+      if @random_player.nationality == 'British'
+        player.update(:in_game => false) unless player.nationality == 'British'
+      else
+        player.update(:in_game => false) if player.nationality == 'British'
+      end
+    end
+    redirect_to '/games'
+  end
+
+
+  def single
+    @players= Player.all
+    @random_player = Player.find(session[:random_player_id])
+    @players.each do |player|
+      if @random_player.marital_status == 'Single'
+        player.update(:in_game => false) unless player.marital_status == 'Single'
+      else
+        player.update(:in_game => false) if player.marital_status == 'Single'
+      end
+    end
+    redirect_to '/games'
+  end
+
+
 
 end
