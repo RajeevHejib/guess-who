@@ -64,5 +64,13 @@
 <br>
 <br>
 <br>
+<%= form_for :games, :remote => true, :method => "get", url: guess_path do |f| %>
+<%= f.select :name, [''] + Player.pluck(:name), :select => '' %>
+<%= f.submit %>
+<% end %>
+<br>
+<br>
+<br>
 <%= link_to "Restart the game", restart_path %>
 </h4>
+<h3><%= @message %></h3>

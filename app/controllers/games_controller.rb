@@ -1,6 +1,7 @@
 class GamesController < ApplicationController
 
   include GamesHelper
+  include PlayersHelper
 
   def view
     @player1 = Player.find(1)
@@ -79,5 +80,15 @@ class GamesController < ApplicationController
     redirect_to '/games'
   end
 
+  def guess
+    @random_player = Player.find(session[:random_player_id])
+    @picked_player = Player.find_by_name(params[:games][:name])
+    if @random_player.name == @picked_player.name
+      flash[:notice] = 'Good guess!'
+    else
+    flash[:notice] = 'Game over!'
+    end
+    redirect_to '/games'
+  end
 
 end
