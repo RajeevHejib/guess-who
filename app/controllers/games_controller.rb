@@ -91,11 +91,18 @@ class GamesController < ApplicationController
     @random_player = Player.find(session[:random_player_id])
     @picked_player = Player.find_by_name(params[:games][:name])
     if @random_player.name == @picked_player.name
-      flash[:notice] = 'Good guess!'
+      redirect_to '/congratulations'
     else
-    flash[:notice] = 'Game over!'
+      redirect_to '/unlucky'
     end
-    redirect_to '/games'
+  end
+
+  def congratulations
+    render 'congratulations'
+  end
+
+  def unlucky
+    render 'unlucky'
   end
 
 end

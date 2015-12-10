@@ -19,9 +19,12 @@ Rails.application.routes.draw do
 
   get 'games/guess' => 'games#guess', as: :guess
 
+  get '/congratulations' => 'games#congratulations', as: :congratulations
+  get '/unlucky' => 'games#unlucky', as: :unlucky
+
 
   get '/games' => 'games#view', as: :games
-  # get '/gender' => 'gender#view', as: :gender
+
 
 
   # Example of regular route:

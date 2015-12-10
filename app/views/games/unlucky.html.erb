@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Unlucky</title>
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+      }
+      body::after {
+        content: "";
+        background: url(unlucky.jpeg);
+        opacity: 0.3;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Unlucky - Wrong Guess!</h1>
+    <%= link_to "Restart the game", restart_path %>
+  </body>
+</html>
