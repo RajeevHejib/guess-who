@@ -215,6 +215,6 @@ player20 = Player.create([{  name: 'Mattia Assogna',
                                 nationality: 'British',
                                 no_of_friends: 250,
                                 marital_status: 'Single',
-                                image_file_name: 'Mattia.jpeg',
+                                image_file_name: 'Mattia.png',
                                 in_game: true
                               }])
