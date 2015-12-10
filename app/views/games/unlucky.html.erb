@@ -24,7 +24,11 @@
     </style>
   </head>
   <body>
-    <h1>Unlucky - Wrong Guess!</h1>
-    <%= link_to "Restart the game", restart_path %>
+   <h1>Wrong Guess!</h1>
+   <h2>The correct person was <%= @random_player.name %></h2>
+   <br><%= image_tag @random_player.image.url(:thumb) %>
   </body>
-</html>
+  <footer>
+   <%= link_to "Play again", restart_path %>
+  </footer>
+  </html>

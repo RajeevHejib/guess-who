@@ -174,3 +174,47 @@ player16 = Player.create([{  name: 'Edward Withers',
                                 image_file_name: 'Edward.jpeg',
                                 in_game: true
                               }])
+
+player17 = Player.create([{  name: 'George Maddocks',
+                                gender: 'Male',
+                                age: 23,
+                                city: 'London',
+                                nationality: 'British',
+                                no_of_friends: 250,
+                                marital_status: 'Single',
+                                image_file_name: 'George.jpeg',
+                                in_game: true
+                              }])
+
+player18 = Player.create([{  name: 'Ezzy Elliott',
+                                gender: 'Male',
+                                age: 50,
+                                city: 'London',
+                                nationality: 'British',
+                                no_of_friends: 250,
+                                marital_status: 'Married',
+                                image_file_name: 'Ezzy.jpeg',
+                                in_game: true
+                              }])
+
+player19 = Player.create([{  name: 'Hamza Sheikh',
+                                gender: 'Male',
+                                age: 25,
+                                city: 'London',
+                                nationality: 'British',
+                                no_of_friends: 250,
+                                marital_status: 'Single',
+                                image_file_name: 'Hamza.jpeg',
+                                in_game: true
+                              }])
+
+player20 = Player.create([{  name: 'Mattia Assogna',
+                                gender: 'Male',
+                                age: 25,
+                                city: 'Pescara',
+                                nationality: 'Italian',
+                                no_of_friends: 250,
+                                marital_status: 'In a relationship',
+                                image_file_name: 'Mattia.png',
+                                in_game: true
+                              }])
