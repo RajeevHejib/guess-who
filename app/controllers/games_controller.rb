@@ -90,6 +90,7 @@ class GamesController < ApplicationController
   def guess
     @random_player = Player.find(session[:random_player_id])
     @picked_player = Player.find_by_name(params[:games][:name])
+    p params[:games][:name]
     if @random_player.name == @picked_player.name
       redirect_to '/congratulations'
     else
