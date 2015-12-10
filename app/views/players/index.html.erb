@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
   <style>
       body {
         width: 100%;
@@ -20,28 +21,6 @@
         right: 0;
         position: absolute;
         z-index: -1;
-      }
-      #signin {
-        background-color: red;
-        background-position: bottom;
-        text-decoration: none;
-        margin-left: 313px;
-        margin-top: 454px;
-      }
-
-      #signup {
-        background-color: white;
-        background-position: bottom;
-        text-decoration: none;
-        margin-top: 457px;
-      }
-
-      #startgame {
-        background-color: white;
-        background-position: bottom;
-        text-decoration: none;
-        margin-left: 500px;
-        margin-top: 300px;
       }
 
   </style>
@@ -64,8 +43,8 @@
   <% if @players.count == 0 %>
     <h1>No players yet! Please add some by filling in the form</h1>
   <% else %>
-  <div class="btn btn-primary btn-lg" id="startgame">
-      <%= link_to 'Start Game', games_path %>
+  <div class="btn btn-blob" id="startgame">
+      <%= link_to '?', games_path %>
   </div>
   <% end %>
 <% end %>
