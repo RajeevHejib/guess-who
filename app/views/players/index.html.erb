@@ -30,10 +30,18 @@
       }
 
       #signup {
-        background-color: green;
+        background-color: white;
         background-position: bottom;
         text-decoration: none;
         margin-top: 457px;
+      }
+
+      #startgame {
+        background-color: white;
+        background-position: bottom;
+        text-decoration: none;
+        margin-left: 500px;
+        margin-top: 300px;
       }
 
   </style>
@@ -56,6 +64,8 @@
   <% if @players.count == 0 %>
     <h1>No players yet! Please add some by filling in the form</h1>
   <% else %>
+  <div class="btn btn-primary btn-lg" id="startgame">
       <%= link_to 'Start Game', games_path %>
+  </div>
   <% end %>
 <% end %>
