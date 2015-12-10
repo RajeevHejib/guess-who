@@ -4,27 +4,32 @@ class GamesController < ApplicationController
   include PlayersHelper
 
   def view
-    @pary = []
-    @players = Player.all
-    @players.each do |player|
-      @pary.push(player)
-    end
-    # @player1 = Player.find(1)
-    # @player2 = Player.find(2)
-    # @player3 = Player.find(3)
-    # @player4 = Player.find(4)
-    # @player5 = Player.find(5)
-    # @player6 = Player.find(6)
-    # @player7 = Player.find(7)
-    # @player8 = Player.find(8)
-    # @player9 = Player.find(9)
-    # @player10 = Player.find(10)
-    # @player11 = Player.find(11)
-    # @player12 = Player.find(12)
-    # @player13 = Player.find(13)
-    # @player14 = Player.find(14)
-    # @player15 = Player.find(15)
-    # @player16 = Player.find(16)
+    # @pary = []
+    # @players = Player.all
+    # @players.each do |player|
+    #   @pary.push(player)
+    # end
+    @player1 = Player.find(1)
+    @player2 = Player.find(2)
+    @player3 = Player.find(3)
+    @player4 = Player.find(4)
+    @player5 = Player.find(5)
+    @player6 = Player.find(6)
+    @player7 = Player.find(7)
+    @player8 = Player.find(8)
+    @player9 = Player.find(9)
+    @player10 = Player.find(10)
+    @player11 = Player.find(11)
+    @player12 = Player.find(12)
+    @player13 = Player.find(13)
+    @player14 = Player.find(14)
+    @player15 = Player.find(15)
+    @player16 = Player.find(16)
+    @player17 = Player.find(17)
+    @player18 = Player.find(18)
+    @player19 = Player.find(19)
+    @player20 = Player.find(20)
+
     @random_player = Player.find(session[:random_player_id])
   end
 
@@ -103,10 +108,12 @@ class GamesController < ApplicationController
   end
 
   def congratulations
+    @random_player = Player.find(session[:random_player_id])
     render 'congratulations'
   end
 
   def unlucky
+    @random_player = Player.find(session[:random_player_id])
     render 'unlucky'
   end
 

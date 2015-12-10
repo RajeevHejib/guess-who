@@ -211,10 +211,10 @@ player19 = Player.create([{  name: 'Hamza Sheikh',
 player20 = Player.create([{  name: 'Mattia Assogna',
                                 gender: 'Male',
                                 age: 25,
-                                city: 'London',
-                                nationality: 'British',
+                                city: 'Pescara',
+                                nationality: 'Italian',
                                 no_of_friends: 250,
-                                marital_status: 'Single',
+                                marital_status: 'In a relationship',
                                 image_file_name: 'Mattia.png',
                                 in_game: true
                               }])
