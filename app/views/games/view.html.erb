@@ -6,125 +6,44 @@
 </head>
 <body>
   <div class="container">
-     <div class="row">
-       <div class="col-sm-3" id="<%=@player1.in_game == true ? "true" : "false"%>">
-         <%=image_tag @player1.image.url(:thumb) %>
-         <br><%= @player1.name %>
-       </div>
-       <div class="col-sm-3" id="<%=@player2.in_game == true ? "true" : "false"%>">
-         <%=image_tag @player2.image.url(:thumb) %>
-         <br><%= @player2.name %>
-       </div>
-       <div class="col-sm-3" id="<%=@player3.in_game == true ? "true" : "false"%>">
-         <%=image_tag @player3.image.url(:thumb) %>
-         <br><%= @player3.name %>
-       </div>
-       <div class="col-sm-3" id="<%=@player4.in_game == true ? "true" : "false"%>">
-         <%=image_tag @player4.image.url(:thumb) %>
-         <br><%= @player4.name %>
-       </div>
-     </div>
-     <div class="row">
-       <div class="col-sm-3" id="<%=@player5.in_game == true ? "true" : "false"%>">
-         <%=image_tag @player5.image.url(:thumb) %>
-         <br><%= @player5.name %>
-       </div>
-       <div class="col-sm-3" id="<%=@player6.in_game == true ? "true" : "false"%>">
-         <%=image_tag @player6.image.url(:thumb) %>
-         <br><%= @player6.name %>
-       </div>
-       <div class="col-sm-3" id="<%=@player7.in_game == true ? "true" : "false"%>">
-         <%=image_tag @player7.image.url(:thumb) %>
-         <br><%= @player7.name %>
-       </div>
-       <div class="col-sm-3" id="<%=@player8.in_game == true ? "true" : "false"%>">
-         <%=image_tag @player8.image.url(:thumb) %>
-         <br><%= @player8.name %>
-       </div>
-     </div>
-     <div class="row">
-       <div class="col-sm-3" id="<%=@player9.in_game == true ? "true" : "false"%>">
-         <%=image_tag @player9.image.url(:thumb) %>
-         <br><%= @player9.name %>
-       </div>
-       <div class="col-sm-3" id="<%=@player10.in_game == true ? "true" : "false"%>">
-         <%=image_tag @player10.image.url(:thumb) %>
-         <br><%= @player10.name %>
-       </div>
-       <div class="col-sm-3" id="<%=@player11.in_game == true ? "true" : "false"%>">
-         <%=image_tag @player11.image.url(:thumb) %>
-         <br><%= @player11.name %>
-       </div>
-       <div class="col-sm-3" id="<%=@player12.in_game == true ? "true" : "false"%>">
-         <%=image_tag @player12.image.url(:thumb) %>
-         <br><%= @player12.name %>
-       </div>
-     </div>
-     <div class="row">
-       <div class="col-sm-3" id="<%=@player13.in_game == true ? "true" : "false"%>">
-         <%=image_tag @player13.image.url(:thumb) %>
-         <br><%= @player13.name %>
-       </div>
-       <div class="col-sm-3" id="<%=@player14.in_game == true ? "true" : "false"%>">
-         <%=image_tag @player14.image.url(:thumb) %>
-         <br><%= @player14.name %>
-       </div>
-       <div class="col-sm-3" id="<%=@player15.in_game == true ? "true" : "false"%>">
-         <%=image_tag @player15.image.url(:thumb) %>
-         <br><%= @player15.name %>
-       </div>
-       <div class="col-sm-3" id="<%=@player16.in_game == true ? "true" : "false"%>">
-         <%=image_tag @player16.image.url(:thumb) %>
-         <br><%= @player16.name %>
-       </div>
-     </div>
-       <div class="row">
-         <div class="col-sm-3" id="<%=@player17.in_game == true ? "true" : "false"%>">
-           <%=image_tag @player17.image.url(:thumb) %>
-           <br><%= @player17.name %>
-         </div>
-         <div class="col-sm-3" id="<%=@player18.in_game == true ? "true" : "false"%>">
-           <%=image_tag @player18.image.url(:thumb) %>
-           <br><%= @player18.name %>
-         </div>
-         <div class="col-sm-3" id="<%=@player19.in_game == true ? "true" : "false"%>">
-           <%=image_tag @player19.image.url(:thumb) %>
-           <br><%= @player19.name %>
-         </div>
-         <div class="col-sm-3" id="<%=@player20.in_game == true ? "true" : "false"%>">
-           <%=image_tag @player20.image.url(:thumb) %>
-           <br><%= @player20.name %>
-         </div>
-       </div>
-     </div>
-     <div  align="center" id="dashboard">
-    <h4>
-      <div id="questions"><br>
-      <%= link_to "Are you a male?", gender_path %>
-      <br>
-      <br>
-      <br>
-      <%= link_to "Are you over 30?", age_path %>
-      <br>
-      <br>
-      <br>
-      <%= link_to "Are you British?", nationality_path %>
-      <br>
-      <br>
-      <br>
-      <%= link_to "Are you single?", single_path %><br><br>
-      </div>
-      <div><br>
-        Are you...<br><br>
-        <%= form_for :games, :remote => true, :method => "get", url: guess_path do |f| %>
-        <%= f.select :name, [''] + Player.pluck(:name), :select => '' %><br><br>
-        <%= f.submit "Submit"%>
-        <% end %><br>
-      </div>
-      <div id="game-restart"><br>
-        <%= link_to "Restart the game", restart_path %><br><br>
-      </div>
-    </h4>
+    <div class="row">
+      <% @pary.each do |player| %>
+        <div class="col-sm-3" id="<%=player.in_game == true ? "true" : "false"%>">
+          <%=image_tag player.image.url(:thumb) %>
+          <br><%= player.name %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+    <div  align="center" id="dashboard">
+      <h4>
+        <div id="questions"><br>
+        <%= link_to "Are you a male?", gender_path %>
+        <br>
+        <br>
+        <br>
+        <%= link_to "Are you over 30?", age_path %>
+        <br>
+        <br>
+        <br>
+        <%= link_to "Are you British?", nationality_path %>
+        <br>
+        <br>
+        <br>
+        <%= link_to "Are you single?", single_path %><br><br>
+        </div>
+        <div><br>
+          Are you...<br><br>
+          <%= form_for :games, :remote => true, :method => "get", url: guess_path do |f| %>
+          <%= f.select :name, [''] + Player.pluck(:name), :select => '' %><br><br>
+          <%= f.submit "Submit"%>
+          <% end %><br>
+        </div>
+        <div id="game-restart"><br>
+          <%= link_to "Restart the game", restart_path %><br><br>
+        </div>
+      </h4>
+    </div>
   </div>
 </body>
 </html>
