@@ -4,31 +4,31 @@ class GamesController < ApplicationController
   include PlayersHelper
 
   def view
-    # @pary = []
-    # @players = Player.all
-    # @players.each do |player|
-    #   @pary.push(player)
-    # end
-    @player1 = Player.find(1)
-    @player2 = Player.find(2)
-    @player3 = Player.find(3)
-    @player4 = Player.find(4)
-    @player5 = Player.find(5)
-    @player6 = Player.find(6)
-    @player7 = Player.find(7)
-    @player8 = Player.find(8)
-    @player9 = Player.find(9)
-    @player10 = Player.find(10)
-    @player11 = Player.find(11)
-    @player12 = Player.find(12)
-    @player13 = Player.find(13)
-    @player14 = Player.find(14)
-    @player15 = Player.find(15)
-    @player16 = Player.find(16)
-    @player17 = Player.find(17)
-    @player18 = Player.find(18)
-    @player19 = Player.find(19)
-    @player20 = Player.find(20)
+    @pary = []
+    @players = Player.order(:created_at)
+    @players.each do |player|
+      @pary.push(player)
+    end
+    # @player1 = Player.find(1)
+    # @player2 = Player.find(2)
+    # @player3 = Player.find(3)
+    # @player4 = Player.find(4)
+    # @player5 = Player.find(5)
+    # @player6 = Player.find(6)
+    # @player7 = Player.find(7)
+    # @player8 = Player.find(8)
+    # @player9 = Player.find(9)
+    # @player10 = Player.find(10)
+    # @player11 = Player.find(11)
+    # @player12 = Player.find(12)
+    # @player13 = Player.find(13)
+    # @player14 = Player.find(14)
+    # @player15 = Player.find(15)
+    # @player16 = Player.find(16)
+    # @player17 = Player.find(17)
+    # @player18 = Player.find(18)
+    # @player19 = Player.find(19)
+    # @player20 = Player.find(20)
 
     @random_player = Player.find(session[:random_player_id])
   end
@@ -38,7 +38,8 @@ class GamesController < ApplicationController
   end
 
   def gender
-    @players= Player.all
+    # @players= Player.all
+    @players = Player.order(:created_at)
     @random_player = Player.find(session[:random_player_id])
     @players.each do |player|
       player.update(:in_game => false) unless player.gender == @random_player.gender
@@ -47,7 +48,8 @@ class GamesController < ApplicationController
   end
 
   def age
-    @players= Player.all
+    # @players= Player.all
+    @players = Player.order(:created_at)
     @random_player = Player.find(session[:random_player_id])
     @players.each do |player|
       if @random_player.age > 30
@@ -60,7 +62,8 @@ class GamesController < ApplicationController
   end
 
   def nationality
-    @players= Player.all
+    # @players= Player.all
+    @players = Player.order(:created_at)
     @random_player = Player.find(session[:random_player_id])
     @players.each do |player|
       if @random_player.nationality == 'British'
@@ -74,7 +77,8 @@ class GamesController < ApplicationController
 
 
   def single
-    @players= Player.all
+    # @players= Player.all
+    @players = Player.order(:created_at)
     @random_player = Player.find(session[:random_player_id])
     @players.each do |player|
       if @random_player.marital_status == 'Single'
@@ -87,7 +91,8 @@ class GamesController < ApplicationController
   end
 
   def restart
-    @players= Player.all
+    # @players= Player.all
+    @players = Player.order(:created_at)
     @players.each do |player|
       player.update(:in_game => true)
     end
