@@ -1,5 +1,5 @@
 FactoryGirl.define do
- factory :player do
+ factory :player1 do
    name 'Fergus Lemon'
    gender 'Male'
    age 30
@@ -12,7 +12,7 @@ FactoryGirl.define do
 
  # This will use the User class (Admin would have been guessed)
  factory :player2, class: Player do
-   name 'Amy Yang'
+   name 'Amy Yangs'
    gender 'Female'
    age 28
    city 'Ulaanbaatar'
