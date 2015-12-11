@@ -7,7 +7,7 @@
 <body>
   <div class="container">
     <div class="row">
-      <% @pary.each do |player| %>
+      <% @players.each do |player| %>
         <div class="col-sm-3" id="<%=player.in_game == true ? "true" : "false"%>">
           <%=image_tag player.image.url(:thumb) %>
           <br><%= player.name %>

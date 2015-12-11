@@ -4,11 +4,10 @@ class GamesController < ApplicationController
   include PlayersHelper
 
   def view
-    @pary = []
+    # @pary = []
     @players = Player.order(:created_at)
-    @players.each do |player|
-      @pary.push(player)
-    end
+    # @players.each do |player|
+    #   @pary.push(player)
     # @player1 = Player.find(1)
     # @player2 = Player.find(2)
     # @player3 = Player.find(3)
